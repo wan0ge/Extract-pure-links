@@ -1,0 +1,427 @@
+<!--  禁止倒卖、商用，版权归HXDD233@qq.com所有，如有侵权会进行合法追究  -->
+<!DOCTYPE html>
+<!-- saved from url=(0041)file:///C:/Users/Mashiro/Downloads/2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url(https://picdm.sunbangyan.cn/2023/11/05/06d87f519a1aeadc7aecf18a29a761b7.jpg);
+)
+;
+    }
+
+    .container {
+      width: 20%;
+      height: 60%;
+      border-radius: 18px;
+      background-color: #fff3ecbe;
+      box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+      padding: 32px;
+      display: flex;
+      backdrop-filter: blur(50px);
+      flex-direction: column;
+      align-items: center;
+      transition: 0.4s;
+      transition-delay: 10s;
+    }
+
+    .container:hover {
+      width: 40%;
+      height: 70%;
+      background-color: #fff3ec;
+      border-radius: 18px;
+      box-shadow: 0 4px 36px rgba(0, 0, 0, 0.1);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: 0.4s;
+      transition-delay: 0s;
+    }
+
+    h2 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 12px;
+      box-sizing: border-box;
+      border: 0px solid #ccc;
+      border-radius: 5px;
+      background-color: #ffffff;
+      resize: none;
+      transition: 0.3s;
+      overflow-y: hidden;
+      transition-delay: 10s;
+    }
+
+    textarea:focus{
+      outline: none;
+      border: 3px solid #f5b7ba;
+      animation-duration: 1s;
+      transition: 0.3s;
+      transition-delay: 0s;
+    }
+
+    button {
+      background-color: #ffffff;
+      color: #2b2b2b;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+      width: 30%;
+      font-family: 'Noto Sans SC','STHeiti Light','Source Han Sans CN','SimHei', "Times New Roman",Georgia,Serif,SimHei;
+    }
+
+    button:hover {
+      background-color: #f5b7ba;
+      color: #ffffff; 
+    }
+
+    .output {
+      width: 100%;
+      margin-top: 10px; /* 增加上下间距 */
+      
+    }
+
+    .output p .outputLinks {
+      color: #333;
+      margin: 10px 10px; /* 增加上下间距 */
+      background-color: #ffffff;
+      border-radius: 5px;
+
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    #autoCopyContainer {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      height: 50px;
+      background-color: #ffffff;
+      text-align: center;
+      margin: 10px 10px; /* 增加上下间距 */
+      align-items: center;
+      justify-content: center;
+      font-family: 'Noto Sans SC','STHeiti Light','Source Han Sans CN','SimHei', "Times New Roman",Georgia,Serif,SimHei;
+      border-radius: 5px;
+    }
+
+    #copyStatusContainer {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px; /* 增加上下间距 */
+    }
+
+    #footer {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      color: #777;
+    }
+
+/* 在 CSS 样式中添加新的样式 */
+.preview-container {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 400px;
+    height: 50px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none; /* 默认隐藏 */
+    overflow: auto;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>提取链接和书引号中的文本</h2>
+
+  <p>在下方粘贴文本:</p>
+
+    <textarea id="inputText" rows="6" oninput="extractContent()" onmouseenter="forceActivateInput()" onfocus="forceActivateInput()"></textarea>
+    <button onclick="togglePreview()" id="previewButton">显示预览</button>
+    <div class="preview-container" id="previewContainer" style="display: none;"></div>
+
+  <div class="button-container">
+    <button onclick="copyLinks()">复制链接</button>
+    <button onclick="copyText()">复制文本</button>
+    <button onclick="clearText()">清空文本</button>
+  </div>
+
+  <div class="output">
+    <p><strong>提取的链接:</strong></p>
+    <p id="outputLinks" style="background-color: #ffffff;width: 100%;height: 70px;padding-top: 0px;transition: 0.5s;border-radius: 5px;text-align: center;justify-content: center;line-height: 70px;"></p>
+
+    <p><strong>提取的文本:</strong></p>
+    <p id="outputText" style="
+    background-color: #ffffff;
+    width: 100%;
+    height: 50px;
+    padding-top: 0px;
+    transition: 0.5s;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    margin: 0 auto;
+    line-height: 50px;
+"></p>
+  </div>
+
+  <div id="autoCopyContainer">
+    <label for="autoCopyCheckbox">自动复制链接</label>
+    <input type="checkbox" id="autoCopyCheckbox" onchange="toggleAutoCopy()">
+  </div>
+
+  <div id="autoClearContainer">
+    <label for="autoClearCheckbox">复制链接后删除文本</label>
+    <input type="checkbox" id="autoClearCheckbox" onchange="toggleAutoClear()">
+  </div>
+
+  <div id="copyStatusContainer">
+    <p id="copyStatus"></p>
+  </div>
+</div>
+
+<div id="footer">
+  by:
+鸽（与Ai对话）/
+MashiroHut（UI设计）/
+ChatGPT（代码提供）
+</div>
+
+
+<script>
+  // 从本地存储中获取开关状态
+  let autoCopyEnabled = localStorage.getItem("autoCopyEnabled") === "true";
+  let autoClearEnabled = localStorage.getItem("autoClearEnabled") === "true";
+let previousText = "";
+
+  // 设置开关状态
+  function setSwitchesState() {
+    document.getElementById("autoCopyCheckbox").checked = autoCopyEnabled;
+    document.getElementById("autoClearCheckbox").checked = autoClearEnabled;
+  }
+
+  // 保存开关状态到本地存储
+  function saveSwitchesState() {
+    localStorage.setItem("autoCopyEnabled", autoCopyEnabled);
+    localStorage.setItem("autoClearEnabled", autoClearEnabled);
+  }
+
+  // 在页面加载完成后设置开关状态
+  document.addEventListener("DOMContentLoaded", function () {
+    setSwitchesState();
+  });
+
+
+function extractContent() {
+  var inputText = document.getElementById("inputText").value;
+  var linkRegex = /((https?|ftp):\/\/[^\s/$.?#].[^\s]*)/g;
+  var matchedLinks = inputText.match(linkRegex);
+  if (matchedLinks) {
+    document.getElementById("outputLinks").innerHTML = matchedLinks.join("<br>");
+    if (autoCopyEnabled && inputText !== previousText) {
+      copyLinks();
+      previousText = inputText;
+    }
+  } else {
+    document.getElementById("outputLinks").innerHTML = "未发现链接";
+  }
+
+  var textRegex = /《([^》]*)》/g;
+  var matchedText = inputText.match(textRegex);
+  if (matchedText) {
+    var extractedText = matchedText.map(function(item) {
+      return item.replace(/《|》/g, '');
+    });
+    document.getElementById("outputText").innerHTML = extractedText.join("<br>");
+  } else {
+    document.getElementById("outputText").innerHTML = "未发现匹配文本";
+  }
+}
+
+function copyLinks() {
+  var outputLinks = document.getElementById("outputLinks").innerText;
+  if (document.hasFocus()) {
+    navigator.clipboard.writeText(outputLinks)
+      .then(() => {
+        document.getElementById("copyStatus").innerHTML = "已复制链接: " + outputLinks;
+      })
+      .catch((error) => {
+        console.error('Failed to copy: ', error);
+      });
+  } else {
+    console.error('Document is not focused');
+  }
+}
+
+function autoCopy() {
+  if (autoCopyEnabled) {
+    copyLinks();
+    extractContent();
+  }
+}
+
+function copyText() {
+  var outputText = document.getElementById("outputText").innerText;
+  navigator.clipboard.writeText(outputText);
+  document.getElementById("copyStatus").innerHTML = "已复制文本: " + outputText;
+}
+
+function clearText() {
+  document.getElementById("inputText").value = "";
+  document.getElementById("outputLinks").innerHTML = "";
+  document.getElementById("outputText").innerHTML = "";
+}
+
+<!-- 在toggleAutoCopy和toggleAutoClear函数中调用saveSwitchesState -->
+  function toggleAutoCopy() {
+    autoCopyEnabled = !autoCopyEnabled;
+    saveSwitchesState();
+  }
+
+  function toggleAutoClear() {
+    autoClearEnabled = !autoClearEnabled;
+    saveSwitchesState();
+  }
+
+// 在复制链接后执行清除文本框内容的操作
+function copyLinks() {
+    var outputLinks = document.getElementById("outputLinks").innerText;
+    if (document.hasFocus()) {
+        navigator.clipboard.writeText(outputLinks)
+            .then(() => {
+                document.getElementById("copyStatus").innerHTML = "已复制链接: " + outputLinks;
+                var autoClearCheckbox = document.getElementById("autoClearCheckbox");
+                var autoClearEnabled = autoClearCheckbox.checked;
+
+                if (autoClearEnabled) {
+                    setTimeout(() => {
+                        document.getElementById("inputText").value = ""; // 2秒后清空文本框
+                    }, 2000); // 延迟2秒执行
+                }
+            })
+            .catch((error) => {
+                console.error('Failed to copy: ', error);
+            });
+    } else {
+        console.error('Document is not focused');
+    }
+}
+
+// 在页面加载完成后为复选框添加事件监听器
+    document.addEventListener('DOMContentLoaded', function() {
+      setSwitchesState();
+    var autoClearCheckbox = document.getElementById("autoClearCheckbox");
+
+    // 监听复选框的改变
+    autoClearCheckbox.addEventListener('change', function() {
+      autoClearEnabled = autoClearCheckbox.checked;
+      saveSwitchesState();
+    });
+
+    // 复选框初始化时手动触发一次change事件，确保初始状态被记录
+    autoClearCheckbox.dispatchEvent(new Event('change'));
+});
+
+function copyLinks() {
+    var outputLinks = document.getElementById("outputLinks").innerText;
+    if (document.hasFocus()) {
+        navigator.clipboard.writeText(outputLinks)
+            .then(() => {
+                document.getElementById("copyStatus").innerHTML = "已复制链接: " + outputLinks;
+                var autoClearCheckbox = document.getElementById("autoClearCheckbox");
+                var autoClearEnabled = autoClearCheckbox.checked;
+
+                if (autoClearEnabled) {
+                    setTimeout(() => {
+                        document.getElementById("inputText").value = ""; // 2秒后清空文本框
+                    }, 1000); // 延迟2秒执行
+                }
+            })
+            .catch((error) => {
+                console.error('Failed to copy: ', error);
+            });
+    } else {
+        console.error('Document is not focused');
+    }
+}
+
+
+
+let lastPastedValue = ""; // 存储最后一次粘贴的内容
+
+// 监听粘贴事件
+document.addEventListener('paste', function(event) {
+    // 获取粘贴的内容
+    var pastedText = (event.clipboardData || window.clipboardData).getData('text');
+
+    if (pastedText && pastedText !== lastPastedValue) {
+        lastPastedValue = pastedText;
+
+        // 显示预览内容
+        var previewContainer = document.getElementById("previewContainer");
+<!--        previewContainer.style.display = "block";  -->
+        previewContainer.textContent = lastPastedValue;
+    }
+});
+
+function togglePreview() {
+    var previewContainer = document.getElementById("previewContainer");
+
+    // 切换预览区域的显示状态
+    if (previewContainer.style.display === "block") {
+        previewContainer.style.display = "none";
+    } else {
+        var inputText = document.getElementById("inputText").value;
+        previewContainer.style.display = "block";
+    }
+
+    updatePreviewButtonText(); // 更新按钮上的文本内容
+}
+
+function updatePreviewButtonText() {
+    var previewContainer = document.getElementById("previewContainer");
+    var previewButton = document.getElementById("previewButton");
+
+    // 更新按钮上的文本内容
+    if (previewContainer.style.display === "block") {
+        previewButton.textContent = "关闭预览";
+    } else {
+        previewButton.textContent = "显示预览";
+    }
+}
+
+var inputTextArea = document.getElementById("inputText");
+
+function forceActivateInput() {
+    inputTextArea.focus(); // 在输入框获取焦点时再次强制激活
+}
+
+</script>
+<!--  禁止倒卖、商用，版权归HXDD233@qq.com所有，如有侵权会进行合法追究  -->
+</body></html>
