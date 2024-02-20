@@ -223,38 +223,49 @@ ChatGPT（代码提供）
 
 
 <script>
-    // 随机显示网页图标
-    // Array of icon filenames (SVG format)
-    var icons = [
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/主网页图标-@一个人的鱼鱼鱼.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/主网页图标-@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/冰棍@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/冰棍@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/啤酒2@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/啤酒@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/奶酪@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/寿司@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/披萨@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/柠檬@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/水杯@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/汉堡包@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/汽水@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/牛奶@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/瓶装果汁@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/甜筒冰淇淋@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/生日蛋糕@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/碗筷@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/萝卜@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/锥形高脚杯@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/面包2@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/面包@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/餐盘盖@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/高脚杯@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/鱼@爱嗦辣条的射鸡师.svg",
-        "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/鸡腿@爱嗦辣条的射鸡师.svg",
-        
-        // Add more icon filenames as needed
-    ];
+        // 随机显示网页图标
+        // Array of icon filenames (SVG format)
+        var icons = [
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/主网页图标-@一个人的鱼鱼鱼.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/主网页图标-@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/冰棍@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/冰棍@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/啤酒2@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/啤酒@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/奶酪@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/寿司@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/披萨@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/柠檬@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/水杯@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/汉堡包@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/汽水@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/牛奶@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/瓶装果汁@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/甜筒冰淇淋@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/生日蛋糕@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/碗筷@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/萝卜@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/锥形高脚杯@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/面包2@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/面包@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/餐盘盖@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/高脚杯@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/鱼@爱嗦辣条的射鸡师.svg",
+            "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/@爱嗦辣条的射鸡师/鸡腿@爱嗦辣条的射鸡师.svg",
+            // Add more icon filenames as needed
+        ];
+
+        // Function to randomly select an icon from the array
+        function getRandomIcon() {
+            var randomIndex = Math.floor(Math.random() * icons.length);
+            return icons[randomIndex];
+        }
+
+        // Update the favicon link with a random icon on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            var randomIcon = getRandomIcon();
+            document.getElementById("favicon").href = randomIcon;
+        });
 
   // 从本地存储中获取开关状态
   let autoCopyEnabled = localStorage.getItem("autoCopyEnabled") === "true";
