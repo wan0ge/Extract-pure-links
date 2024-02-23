@@ -4,6 +4,8 @@
 <html>
  <title>提取链接和书引号中的文本-wan0ge</title>
  <link rel="icon" type="image/svg+xml" href="default-icon.svg" id="favicon">
+ <link rel="preload" href='image/woff2/MiSans-Regular.woff2' as="font">
+ <link rel="preload" href='image/woff2/MiSans-Semibold.woff2' as="font">
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -13,20 +15,29 @@
   <style>
 
 @font-face {
-    font-family: 'SarasaGothicSC-Regular';
-    src: url('image/woff2/SarasaGothicSC-Regular.woff2') format('woff2');
+    font-family: 'MiSans-Regular';
+    src: url('image/woff2/MiSans-Regular.woff2') format('woff2');
     font-weight:400;
     font-display:swap;
 }
 @font-face {
-    font-family: 'SarasaGothicSC-Regular';
-    src: url('image/woff2/SarasaGothicSC-SemiBold.woff2') format('woff2');
+    font-family: 'MiSans-Semibold';
+    src: url('image/woff2/MiSans-Semibold.woff2') format('woff2');
     font-weight:700;
     font-display:swap;
 }
+@font-face {
+  font-family: Emoji;
+  src: local("Apple Color Emojiji"), local("Segoe UI Emoji"), local("Segoe UI Symbol"), local("Noto Color Emoji");
+  unicode-range: U+1F000-1F644, U+203C-3299;
+}
+body {
+  font-family: 'MiSans-Regular',system-ui, —apple-system, Segoe UI, Rototo, Emoji, Helvetica, Arial, sans-serif;
+}
 
     body {
-      font-family: 'Roboto', sans-serif;
+ /*     font-family: 'Roboto', sans-serif;*/
+      /* 这里使用了字体 */
       background-color: #f9f9f9;
       display: flex;
       flex-direction: column;
@@ -105,7 +116,8 @@
       margin-top: 10px;
       transition: background-color 0.3s;
       width: 30%;
-      font-family: 'Noto Sans SC','STHeiti Light','Source Han Sans CN','SimHei', "Times New Roman",Georgia,Serif,SimHei;
+      font-family: 'MiSans-Regular'
+      /* 这里使用了字体 */
     }
 
     button:hover {
@@ -143,7 +155,8 @@
       margin: 10px 10px; /* 增加上下间距 */
       align-items: center;
       justify-content: center;
-      font-family: 'Noto Sans SC','STHeiti Light','Source Han Sans CN','SimHei', "Times New Roman",Georgia,Serif,SimHei;
+/*      font-family: 'Noto Sans SC','STHeiti Light','Source Han Sans CN','SimHei', "Times New Roman",Georgia,Serif,SimHei;*/
+      /* 这里使用了字体 */
       border-radius: 5px;
     }
 
