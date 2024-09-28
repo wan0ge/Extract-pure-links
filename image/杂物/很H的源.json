@@ -9,7 +9,7 @@
           "description": "很H的源！低调使用！",
           "iconUrl": "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/杂物/hanime1.me_1080.png",
           "searchConfig": {
-            "searchUrl": "searchUrl":"https://hanime1.me/search?query={keyword}",
+            "searchUrl": "https://hanime1.me/search?query={keyword}",
             "searchUseOnlyFirstWord": true,
             "preferShortest": true,
             "subjectFormatId": "indexed",
@@ -59,7 +59,7 @@
           "description": "1080搜不到用这个",
           "iconUrl": "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/杂物/hanime1.me_720.png",
           "searchConfig": {
-            "searchUrl": "searchUrl":"https://hanime1.me/search?query={keyword}",
+            "searchUrl": "https://hanime1.me/search?query={keyword}",
             "searchUseOnlyFirstWord": true,
             "preferShortest": true,
             "subjectFormatId": "indexed",
