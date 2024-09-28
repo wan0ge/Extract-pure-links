@@ -6,8 +6,8 @@
         "version": 1,
         "arguments": {
           "name": "nyaa-里",
-          "description": "很H的bt源！低调使用！",
-          "iconUrl": "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/杂物/nyaa.si.png",
+          "description": "很H的BT源！低调使用！",
+          "iconUrl": "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/杂物/nyaa.si_H.png",
           "searchConfig": {
             "searchUrl": "https://sukebei.nyaa.si/?page=rss&q={keyword}&c=0_0&f=0",
             "filterByEpisodeSort": false,
@@ -20,7 +20,7 @@
         "version": 1,
         "arguments": {
           "name": "hanime1_1080p",
-          "description": "很H的源！低调使用！",
+          "description": "很H的在线源！低调使用！",
           "iconUrl": "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/杂物/hanime1.me_1080.png",
           "searchConfig": {
             "searchUrl": "https://hanime1.me/search?query={keyword}",
