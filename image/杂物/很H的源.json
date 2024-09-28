@@ -1,6 +1,20 @@
 {
   "exportedMediaSourceDataList": {
     "mediaSources": [
+	      {
+        "factoryId": "rss",
+        "version": 1,
+        "arguments": {
+          "name": "nyaa-里",
+          "description": "很H的bt源！低调使用！",
+          "iconUrl": "https://gitee.com/wan0ge/extract-pure-links/raw/master/image/杂物/nyaa.si.png",
+          "searchConfig": {
+            "searchUrl": "https://sukebei.nyaa.si/?page=rss&q={keyword}&c=0_0&f=0",
+            "filterByEpisodeSort": false,
+            "filterBySubjectName": false
+          }
+        }
+      },
       {
         "factoryId": "web-selector",
         "version": 1,
