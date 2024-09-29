@@ -1,0 +1,128 @@
+{
+  "exportedMediaSourceDataList": {
+    "mediaSources": [
+	      {
+        "factoryId": "rss",
+        "version": 1,
+        "arguments": {
+          "name": "nyaa-里",
+          "description": "很H的BT源！低调使用！",
+          "iconUrl": "https://gitee.com/wan0ge/extract-pure-links/raw/Ani_Pages/favicon/nyaa.si_H.png",
+          "searchConfig": {
+            "searchUrl": "https://sukebei.nyaa.si/?page=rss&q={keyword}&c=0_0&f=0",
+            "filterByEpisodeSort": false,
+            "filterBySubjectName": false
+          }
+        }
+      },
+      {
+        "factoryId": "web-selector",
+        "version": 1,
+        "arguments": {
+          "name": "hanime1_1080p",
+          "description": "很H的在线源！低调使用！",
+          "iconUrl": "https://gitee.com/wan0ge/extract-pure-links/raw/Ani_Pages/favicon/hanime1.me_1080.png",
+          "searchConfig": {
+            "searchUrl": "https://hanime1.me/search?query={keyword}",
+            "searchUseOnlyFirstWord": false,
+            "preferShortest": true,
+            "subjectFormatId": "indexed",
+            "selectorSubjectFormatA": {
+              "selectLists": "div.home-rows-videos-wrapper a",
+              "preferShorterName": false
+            },
+            "selectorSubjectFormatIndexed": {
+              "selectNames": "#home-rows-wrapper > div.content-padding-new > div > div.col-xs-12.search-doujin-videos.hidden-sm.hidden-md.hidden-lg.hidden-xl.hover-lighter.multiple-link-wrapper > div > div > div > div.card-mobile-title",
+              "selectLinks": "#home-rows-wrapper > div.content-padding-new > div > div.col-xs-12.search-doujin-videos.hidden-sm.hidden-md.hidden-lg.hidden-xl.hover-lighter.multiple-link-wrapper > a",
+              "preferShorterName": true
+            },
+            "channelFormatId": "index-grouped",
+            "selectorChannelFormatFlattened": {
+              "selectChannelNames": "#video-artist-name",
+              "matchChannelName": "",
+              "selectEpisodeLists": "#playlist-scroll",
+              "selectEpisodesFromList": "div.related-watch-wrap .card-mobile-title",
+              "selectEpisodeLinksFromList": "#playlist-scroll > div.related-watch-wrap > a",
+              "matchEpisodeSortFromName": "(?<ep>(?:SP\\s\\d+|\\d+))"
+            },
+            "selectorChannelFormatNoChannel": {
+              "selectEpisodes": "#playlist-scroll > div.related-watch-wrap .card-mobile-title",
+              "selectEpisodeLinks": "#playlist-scroll > div.related-watch-wrap > a",
+              "matchEpisodeSortFromName": "(?<ep>(?:SP\\s\\d+|\\d+))"
+            },
+            "filterByEpisodeSort": true,
+            "filterBySubjectName": false,
+            "selectMedia":{
+              "distinguishSubjectName":false,
+              "distinguishChannelName":true
+			},
+            "matchVideo": {
+              "enableNestedUrl": false,
+              "matchNestedUrl": "^.+(vip|index\\.php).+\\?",
+              "matchVideoUrl": "^(?=.*(vdownload|xvideos))(?=.*1080).*?(m3u8|mp4|vip|xigua\\.php).*",
+              "cookies": "quality=1080",
+              "addHeadersToVideo": {
+                "referer": "",
+                "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+              }
+            }
+          }
+        }
+      },
+      {
+        "factoryId": "web-selector",
+        "version": 1,
+        "arguments": {
+          "name": "hanime1_720p",
+          "description": "1080放不出来用这个",
+          "iconUrl": "https://gitee.com/wan0ge/extract-pure-links/raw/Ani_Pages/favicon/hanime1.me_720.png",
+          "searchConfig": {
+            "searchUrl": "https://hanime1.me/search?query={keyword}",
+            "searchUseOnlyFirstWord": false,
+            "preferShortest": true,
+            "subjectFormatId": "indexed",
+            "selectorSubjectFormatA": {
+              "selectLists": "div.home-rows-videos-wrapper a",
+              "preferShorterName": false
+            },
+            "selectorSubjectFormatIndexed": {
+              "selectNames": "#home-rows-wrapper > div.content-padding-new > div > div.col-xs-12.search-doujin-videos.hidden-sm.hidden-md.hidden-lg.hidden-xl.hover-lighter.multiple-link-wrapper > div > div > div > div.card-mobile-title",
+              "selectLinks": "#home-rows-wrapper > div.content-padding-new > div > div.col-xs-12.search-doujin-videos.hidden-sm.hidden-md.hidden-lg.hidden-xl.hover-lighter.multiple-link-wrapper > a",
+              "preferShorterName": true
+            },
+            "channelFormatId": "index-grouped",
+            "selectorChannelFormatFlattened": {
+              "selectChannelNames": "#video-artist-name",
+              "matchChannelName": "",
+              "selectEpisodeLists": "#playlist-scroll",
+              "selectEpisodesFromList": "div.related-watch-wrap .card-mobile-title",
+              "selectEpisodeLinksFromList": "#playlist-scroll > div.related-watch-wrap > a",
+              "matchEpisodeSortFromName": "(?<ep>(?:SP\\s\\d+|\\d+))"
+            },
+            "selectorChannelFormatNoChannel": {
+              "selectEpisodes": "#playlist-scroll > div.related-watch-wrap .card-mobile-title",
+              "selectEpisodeLinks": "#playlist-scroll > div.related-watch-wrap > a",
+              "matchEpisodeSortFromName": "(?<ep>(?:SP\\s\\d+|\\d+))"
+            },
+            "filterByEpisodeSort": true,
+            "filterBySubjectName": false,
+            "selectMedia":{
+              "distinguishSubjectName":false,
+              "distinguishChannelName":true
+			},
+            "matchVideo": {
+              "enableNestedUrl": false,
+              "matchNestedUrl": "^.+(vip|index\\.php).+\\?",
+              "matchVideoUrl": "^(?=.*(vdownload|xvideos))(?=.*1080).*?(m3u8|mp4|vip|xigua\\.php).*",
+              "cookies": "quality=1080",
+              "addHeadersToVideo": {
+                "referer": "",
+                "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}
