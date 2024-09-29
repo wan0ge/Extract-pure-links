@@ -16,17 +16,17 @@
     <script>
         document.getElementById('copyButton').addEventListener('click', () => {
             fetch('https://github.com/wan0ge/extract-pure-links/raw/Ani_Pages/output_ips.txt')  // 替换为你的文本文件路径
-                .then(response => {
+                。then(response => {
                     if (!response.ok) {
                         throw new Error('网络响应不正确');
                     }
                     return response.text();
                 })
-                .then(data => {
+                。then(data => {
                     document.getElementById('content').textContent = data;
                     copyToClipboard(data);
                 })
-                .catch(error => {
+                。catch(error => {
                     console.error('获取文件时出错:', error);
                 });
         });
