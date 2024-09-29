@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PCDN吸血IP段</title>
+</head>
+<body>
+    <h2>Peer过滤和屏蔽设置分享</h2>
+	<h3>IP搬运/格式转换自——<a href="https://docs.qq.com/doc/DQnJBTGJjSFZBR2JW">关于近期anacrolix等无限下载的BT工具的说明与对策</a> 作者：Damn☆You<br>
+	如果你发现了可疑地址，欢迎向作者反馈：<a href="https://t.bilibili.com/886509991839662137">作者动态</a></h3>
+    <p>过滤客户端指纹正则：-(DT|HP|XM)0001-|Gopeed dev</p>
+	<p>过滤IP地址：https://t.bilibili.com/886509991839662137
+	    <button id="copyButton">一键复制</button>
+        <pre id="content"></pre></p>
+
+    <script>
+        document.getElementById('copyButton').addEventListener('click', () => {
+            fetch('https://github.com/wan0ge/extract-pure-links/raw/Ani_Pages/output_ips.txt')  // 替换为你的文本文件路径
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('网络响应不正确');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('content').textContent = data;
+                    copyToClipboard(data);
+                })
+                .catch(error => {
+                    console.error('获取文件时出错:', error);
+                });
+        });
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('内容已复制到剪贴板！');
+            }).catch(err => {
+                console.error('复制到剪贴板失败:', err);
+            });
+        }
+
+    </script>
+</body>
+</html>
