@@ -50,16 +50,16 @@
               "selectEpisodeLinks": "#playlist-scroll > div.related-watch-wrap > a",
               "matchEpisodeSortFromName": "(?<ep>(?:SP\\s\\d+|\\d+))"
             },
-            "filterByEpisodeSort": true,
+            "filterByEpisodeSort": false,
             "filterBySubjectName": false,
             "selectMedia":{
               "distinguishSubjectName":false,
               "distinguishChannelName":true
 			},
             "matchVideo": {
-              "enableNestedUrl": false,
-              "matchNestedUrl": "^.+(vip|index\\.php).+\\?",
-              "matchVideoUrl": "^(?=.*(vdownload|xvideos))(?=.*1080).*?(m3u8|mp4|vip|xigua\\.php).*",
+              "enableNestedUrl": true,
+              "matchNestedUrl": "^(?=.*(index))(?=.*1080).*?(m3u8|mp4|vip|xigua\\.php).*",
+              "matchVideoUrl": "(?!.*\\.ts\\?)(?=.*(vdownload|abre-videos|xvideos))(?=.*1080).*?(m3u8|mp4|vip|xigua\\.php).*",
               "cookies": "quality=1080",
               "addHeadersToVideo": {
                 "referer": "",
@@ -74,7 +74,7 @@
         "version": 1,
         "arguments": {
           "name": "hanime1_720p",
-          "description": "1080放不出来用这个",
+          "description": "1080放不出来用这个（说明无1080p）",
           "iconUrl": "https://gitee.com/wan0ge/extract-pure-links/raw/Ani_Pages/favicon/hanime1.me_720.png",
           "searchConfig": {
             "searchUrl": "https://hanime1.me/search?query={keyword}",
@@ -104,16 +104,16 @@
               "selectEpisodeLinks": "#playlist-scroll > div.related-watch-wrap > a",
               "matchEpisodeSortFromName": "(?<ep>(?:SP\\s\\d+|\\d+))"
             },
-            "filterByEpisodeSort": true,
+            "filterByEpisodeSort": false,
             "filterBySubjectName": false,
             "selectMedia":{
               "distinguishSubjectName":false,
               "distinguishChannelName":true
 			},
             "matchVideo": {
-              "enableNestedUrl": false,
-              "matchNestedUrl": "^.+(vip|index\\.php).+\\?",
-              "matchVideoUrl": "^(?=.*(vdownload|xvideos))(?=.*1080).*?(m3u8|mp4|vip|xigua\\.php).*",
+              "enableNestedUrl": true,
+              "matchNestedUrl": "^(?=.*(index))(?=.*1080).*?(m3u8|mp4|vip|xigua\\.php).*",
+              "matchVideoUrl": "(?!.*\\.ts\\?)(?=.*(vdownload|abre-videos|xvideos))(?=.*720).*?(m3u8|mp4|vip|xigua\\.php).*",
               "cookies": "quality=1080",
               "addHeadersToVideo": {
                 "referer": "",
