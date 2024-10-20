@@ -20,7 +20,7 @@
         "version": 1,
         "arguments": {
           "name": "hanime1_1080p",
-          "description": "很H的在线源！低调使用！",
+          "description": "很H的在线源！低调使用！(源网站临时防护中，等待恢复……)",
           "iconUrl": "https://gitee.com/wan0ge/extract-pure-links/raw/Ani_Pages/favicon/hanime1.me_1080.png",
           "searchConfig": {
             "searchUrl": "https://hanime1.me/search?query={keyword}",
