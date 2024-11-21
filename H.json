@@ -132,7 +132,7 @@
         "iconUrl": "https://www.1dm4.cc/favicon.ico?v=1.2.6",
         "searchConfig": {
           "searchUrl": "https://www.1dm4.cc/search/{keyword}-------------.html",
-          "searchUseOnlyFirstWord": true,
+          "searchUseOnlyFirstWord": false,
           "searchRemoveSpecial": true,
           "rawBaseUrl": "",
           "subjectFormatId": "indexed",
