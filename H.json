@@ -10,7 +10,7 @@
           "iconUrl": "https://gitee.com/wan0ge/extract-pure-links/raw/Ani_Pages/favicon/nyaa.si_H.png",
           "searchConfig": {
             "searchUrl": "https://sukebei.nyaa.si/?page=rss&q={keyword}&c=0_0&f=0",
-            "filterByEpisodeSort": false,
+            "filterByEpisodeSort": true,
             "filterBySubjectName": false
           }
         }
