@@ -129,22 +129,22 @@
       "factoryId": "web-selector",
       "version": 2,
       "arguments": {
-        "name": "第一动漫网",
+        "name": "魔都动漫",
         "description": "可直连,含内嵌广告,码率低,请勿相信任何片中广告",
-        "iconUrl": "https://www.1dm4.cc/favicon.ico?v=1.2.6",
+        "iconUrl": "https://www.moduys03.com/favicon.ico",
         "searchConfig": {
-          "searchUrl": "https://www.1dm4.cc/search/{keyword}-------------.html",
+          "searchUrl": "https://www.moduys03.com/search/{keyword}.html",
           "searchUseOnlyFirstWord": false,
           "searchRemoveSpecial": true,
           "rawBaseUrl": "",
-          "subjectFormatId": "indexed",
+          "subjectFormatId": "a",
           "selectorSubjectFormatA": {
-            "selectLists": ".row-cols-1>li>div>div.w-pic>a",
+            "selectLists": "body > main > div.box-width > ul > li > div > div > h3 > a",
             "preferShorterName": true
           },
           "selectorSubjectFormatIndexed": {
-            "selectNames": ".row-cols-1>li>div>div.w-obj>h3>a",
-            "selectLinks": ".row-cols-1>li>div>div.w-pic>a",
+            "selectNames": ".search-box .thumb-content > .thumb-txt",
+            "selectLinks": ".search-box .thumb-menu > a",
             "preferShorterName": true
           },
           "selectorSubjectFormatJsonPathIndexed": {
@@ -154,18 +154,19 @@
           },
           "channelFormatId": "index-grouped",
           "selectorChannelFormatFlattened": {
-            "selectChannelNames": ".nav-tabs>a",
-            "matchChannelName": "",
-            "selectEpisodeLists": ".row-cols-3",
+            "selectChannelNames": "body > main > div > div.anthology.wow.fadeInUp.animated > div > a",
+            "matchChannelName": "^(?<ch>.+?)(\\d+)?$",
+            "selectEpisodeLists": "body > main > div > div > div.anthology-list.top20",
             "selectEpisodesFromList": "a",
             "selectEpisodeLinksFromList": "",
             "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
           },
           "selectorChannelFormatNoChannel": {
-            "selectEpisodes": "#glist-1> div.module-blocklist.scroll-box.scroll-box-y > div > a",
+            "selectEpisodes": "#glist-1 > div.module-blocklist.scroll-box.scroll-box-y > div > a",
             "selectEpisodeLinks": "",
             "matchEpisodeSortFromName": " 第 \\s*(?<ep>.+)\\s*[话集]"
           },
+          "defaultResolution": "1080P",
           "filterByEpisodeSort": true,
           "filterBySubjectName": false,
           "selectMedia": {
