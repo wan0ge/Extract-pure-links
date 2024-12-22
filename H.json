@@ -6,7 +6,7 @@
         "version": 1,
         "arguments": {
           "name": "nyaa-里",
-          "description": "很H的BT源！低调使用！",
+          "description": "H~低调使用~",
           "iconUrl": "https://gitee.com/wan0ge/extract-pure-links/raw/Ani_Pages/favicon/nyaa.si_H.png",
           "searchConfig": {
             "searchUrl": "https://sukebei.nyaa.si/?page=rss&q={keyword}&c=0_0&f=0",
@@ -20,7 +20,7 @@
         "version": 1,
         "arguments": {
           "name": "hanime1_1080p",
-          "description": "很H的在线源！低调使用！(源网站偶尔会开防护)",
+          "description": "H~低调使用 源网站偶尔会开防护 连不上请尝试Tun",
           "iconUrl": "https://gitee.com/wan0ge/extract-pure-links/raw/Ani_Pages/favicon/hanime1.me_1080.png",
           "searchConfig": {
             "searchUrl": "https://hanime1.me/search?query={keyword}",
@@ -55,7 +55,7 @@
             "filterBySubjectName": false,
             "selectMedia":{
               "distinguishSubjectName":false,
-              "distinguishChannelName":true
+              "distinguishChannelName":false
 			},
             "matchVideo": {
               "enableNestedUrl": true,
@@ -110,12 +110,12 @@
             "filterBySubjectName": false,
             "selectMedia":{
               "distinguishSubjectName":false,
-              "distinguishChannelName":true
+              "distinguishChannelName":false
 			},
             "matchVideo": {
               "enableNestedUrl": true,
               "matchNestedUrl": "^(?=.*(index))(?=.*(1080|720|480)).*?(m3u8|mp4|vip|xigua\\.php).*",
-              "matchVideoUrl": "(?!.*\\.ts\\?)(?=.*(vdownload|abre-videos|xvideos))(?=.*720).*?(m3u8|mp4|vip|xigua\\.php).*",
+              "matchVideoUrl": "(?!.*\\.ts\\?)(?=.*(vdownload|abre-videos|xvideos))(?=.*720|480).*?(m3u8|mp4|vip|xigua\\.php).*",
               "cookies": "quality=720",
               "addHeadersToVideo": {
                 "referer": "",
