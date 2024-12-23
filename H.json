@@ -60,7 +60,7 @@
             "matchVideo": {
               "enableNestedUrl": true,
               "matchNestedUrl": "^(?=.*(index))(?=.*(1080|720|480)).*?(m3u8|mp4|vip|xigua\\.php).*",
-              "matchVideoUrl": "(?!.*\\.ts\\?)(?=.*(vdownload|abre-videos|xvideos))(?=.*1080).*?(m3u8|mp4|vip|xigua\\.php).*",
+              "matchVideoUrl": "(?<v>https?:\\/\\/(?:[^\\/]*\\.)?(vdownload|abre-videos|xvideos).*?(1080|720|480).*\\.(m3u8|mp4|vip|xigua\\.php)(?:\\?.+)?)",
               "cookies": "quality=1080",
               "addHeadersToVideo": {
                 "referer": "",
@@ -115,7 +115,7 @@
             "matchVideo": {
               "enableNestedUrl": true,
               "matchNestedUrl": "^(?=.*(index))(?=.*(1080|720|480)).*?(m3u8|mp4|vip|xigua\\.php).*",
-              "matchVideoUrl": "(?!.*\\.ts\\?)(?=.*(vdownload|abre-videos|xvideos))(?=.*720|480).*?(m3u8|mp4|vip|xigua\\.php).*",
+              "matchVideoUrl": "(?<v>https?:\\/\\/(?:[^\\/]*\\.)?(vdownload|abre-videos|xvideos).*?(1080|720|480).*\\.(m3u8|mp4|vip|xigua\\.php)(?:\\?.+)?)",
               "cookies": "quality=720",
               "addHeadersToVideo": {
                 "referer": "",
@@ -176,7 +176,69 @@
           "matchVideo": {
             "enableNestedUrl": true,
             "matchNestedUrl": "^.+(index|m3u8|vip|xigua\\.php).+\\?",
-            "matchVideoUrl": "(^http(s)?:\\/\\/(?:[^/]*\\.)?(?:hn\\.bfvvs|modujx\\w*|rrcdnbf\\w*|lz-cdn\\w*|v\\.cdnlz\\w*|bfikuncdn|cdn\\.wlcdn\\w*|tlkqc|vip.ffzy-play\\w*|vip.ffzy-online\\w*|svipsvip.ffzy-online\\w*)\\S+\\.m3u8(?:\\?.+)?$)",
+            "matchVideoUrl": "(?<v>https?:\\/\\/(?:[^/]*\\.)?(?:hn\\.bfvvs|modujx\\w*|rrcdnbf\\w*|lz-cdn\\w*|v\\.cdnlz\\w*|bfikuncdn|cdn\\.wlcdn\\w*|tlkqc|vip\\.ffzy-play\\w*|vip\\.ffzy-online\\w*|svipsvip\\.ffzy-online\\w*)\\S+\\.(?:mp4|mkv|m3u8)(?:\\?.+)?)",
+            "cookies": "quality=1080",
+            "addHeadersToVideo": {
+              "referer": "",
+              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+              }
+            }
+          }
+        }
+      },
+      {
+      "factoryId": "web-selector",
+      "version": 2,
+      "arguments": {
+        "name": "第一动漫网",
+        "description": "可直连,含内嵌广告,码率低,请勿相信任何片中广告",
+        "iconUrl": "https://www.1dm4.cc/favicon.ico?v=1.2.6",
+        "searchConfig": {
+          "searchUrl": "https://www.1dm4.cc/search/{keyword}-------------.html",
+          "searchUseOnlyFirstWord": false,
+          "searchRemoveSpecial": true,
+          "rawBaseUrl": "",
+          "requestInterval": 2333,
+          "subjectFormatId": "indexed",
+          "selectorSubjectFormatA": {
+            "selectLists": ".row-cols-1>li>div>div.w-pic>a",
+            "preferShorterName": true
+          },
+          "selectorSubjectFormatIndexed": {
+            "selectNames": ".row-cols-1>li>div>div.w-obj>h3>a",
+            "selectLinks": ".row-cols-1>li>div>div.w-pic>a",
+            "preferShorterName": true
+          },
+          "selectorSubjectFormatJsonPathIndexed": {
+            "selectLinks": "$[*]['url', 'link']",
+            "selectNames": "$[*]['title','name']",
+            "preferShorterName": true
+          },
+          "channelFormatId": "index-grouped",
+          "selectorChannelFormatFlattened": {
+            "selectChannelNames": "body > div > div > div > div > div > div > div > li",
+            "matchChannelName": "",
+            "selectEpisodeLists": "body > div.container-fluid > div > div.col-md-9.ms-sm-auto.col-lg-10.p-0.px-md-4.mt-3.mt-md-4 > div.video-tabs.bg-body.rounded.p-3.p-md-4.mt-3.mt-md-4 > div.tab-content.pt-3 > div.tab-pane.fade.show.active.v-list > div.tab-content.form-collapse.pt-3.v-playurl > div> ul > li >a",
+            "selectEpisodesFromList": "a",
+            "selectEpisodeLinksFromList": "",
+            "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
+          },
+          "selectorChannelFormatNoChannel": {
+            "selectEpisodes": "#glist-1> div.module-blocklist.scroll-box.scroll-box-y > div > a",
+            "selectEpisodeLinks": "",
+            "matchEpisodeSortFromName": " 第 \\s*(?<ep>.+)\\s*[话集]"
+          },
+          "defaultResolution": "1080P",
+          "filterByEpisodeSort": true,
+          "filterBySubjectName": false,
+          "selectMedia": {
+            "distinguishSubjectName": true,
+            "distinguishChannelName": true
+          },
+          "matchVideo": {
+            "enableNestedUrl": true,
+            "matchNestedUrl": "^.+(index|m3u8|vip|xigua\\.php).+\\?",
+            "matchVideoUrl": "(?<v>https?:\\/\\/(?:[^/]*\\.)?(?:hn\\.bfvvs|modujx\\w*|rrcdnbf\\w*|lz-cdn\\w*|v\\.cdnlz\\w*|bfikuncdn|cdn\\.wlcdn\\w*|tlkqc|vip\\.ffzy-play\\w*|vip\\.ffzy-online\\w*|svipsvip\\.ffzy-online\\w*)\\S+\\.(?:mp4|mkv|m3u8)(?:\\?.+)?)",
             "cookies": "quality=1080",
             "addHeadersToVideo": {
               "referer": "",
