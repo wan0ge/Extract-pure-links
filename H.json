@@ -176,7 +176,7 @@
           "matchVideo": {
             "enableNestedUrl": true,
             "matchNestedUrl": "^.+(index|m3u8|vip|xigua\\.php).+\\?",
-            "matchVideoUrl": "(?<v>https?:\\/\\/(?:[^/]*\\.)?(?:hn\\.bfvvs|modujx\\w*|rrcdnbf\\w*|lz-cdn\\w*|v\\.cdnlz\\w*|bfikuncdn|cdn\\.wlcdn\\w*|tlkqc|vip\\.ffzy-play\\w*|vip\\.ffzy-online\\w*|svipsvip\\.ffzy-online\\w*)\\S+\\.(?:mp4|mkv|m3u8)(?:\\?.+)?)",
+            "matchVideoUrl": "(?<v>https?:\\/\\/(?:[^/]*\\.)?(?:hn\\.bfvvs|modujx\\w*|rrcdnbf\\w*|lz-cdn\\w*|v\\.cdnlz\\w*|bfikuncdn|cdn\\.wlcdn\\w*|tlkqc|vip\\.ffzy-play\\w*|vip\\.ffzy-online\\w*|svipsvip\\.ffzy-online\\w*|svip\\.high\\w*|v\\w*\\.fentvoss)\\S+\\.(?:mp4|mkv|m3u8)(?:\\?.+)?)"，
             "cookies": "quality=1080",
             "addHeadersToVideo": {
               "referer": "",
@@ -238,7 +238,7 @@
           "matchVideo": {
             "enableNestedUrl": true,
             "matchNestedUrl": "^.+(index|m3u8|vip|xigua\\.php).+\\?",
-            "matchVideoUrl": "(?<v>https?:\\/\\/(?:[^/]*\\.)?(?:hn\\.bfvvs|modujx\\w*|rrcdnbf\\w*|lz-cdn\\w*|v\\.cdnlz\\w*|bfikuncdn|cdn\\.wlcdn\\w*|tlkqc|vip\\.ffzy-play\\w*|vip\\.ffzy-online\\w*|svipsvip\\.ffzy-online\\w*)\\S+\\.(?:mp4|mkv|m3u8)(?:\\?.+)?)",
+            "matchVideoUrl": "(?<v>https?:\\/\\/(?:[^/]*\\.)?(?:hn\\.bfvvs|modujx\\w*|rrcdnbf\\w*|lz-cdn\\w*|v\\.cdnlz\\w*|bfikuncdn|cdn\\.wlcdn\\w*|tlkqc|vip\\.ffzy-play\\w*|vip\\.ffzy-online\\w*|svipsvip\\.ffzy-online\\w*|svip\\.high\\w*|v\\w*\\.fentvoss)\\S+\\.(?:mp4|mkv|m3u8)(?:\\?.+)?)",
             "cookies": "quality=1080",
             "addHeadersToVideo": {
               "referer": "",
