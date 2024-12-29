@@ -145,7 +145,7 @@
           "searchUseSubjectNamesCount": 3,
           "rawBaseUrl": "",
           "requestInterval": 2333,
-          "subjectFormatId": "a"，
+          "subjectFormatId": "a",
           "selectorSubjectFormatA": {
             "selectLists": "body > main > div.box-width > ul > li > div > div > h3 > a",
             "preferShorterName": true
