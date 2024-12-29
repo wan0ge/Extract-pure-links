@@ -144,7 +144,7 @@
           "searchRemoveSpecial": true,
           "searchUseSubjectNamesCount": 3,
           "rawBaseUrl": "",
-          "requestInterval": 2333,
+          "requestInterval": 1233,
           "subjectFormatId": "a",
           "selectorSubjectFormatA": {
             "selectLists": "body > main > div.box-width > ul > li > div > div > h3 > a",
@@ -207,7 +207,7 @@
           "searchRemoveSpecial": true,
           "searchUseSubjectNamesCount": 3,
           "rawBaseUrl": "",
-          "requestInterval": 2333,
+          "requestInterval": 2000,
           "subjectFormatId": "indexed",
           "selectorSubjectFormatA": {
             "selectLists": ".row-cols-1>li>div>div.w-pic>a",
