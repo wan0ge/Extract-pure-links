@@ -17,7 +17,7 @@
       },
       {
         "factoryId": "web-selector",
-        "version": 1,
+        "version": 2,
         "arguments": {
           "name": "hanime1_1080p",
           "description": "H~低调使用 源网站偶尔会开防护 连不上请尝试Tun",
@@ -25,7 +25,10 @@
           "searchConfig": {
             "searchUrl": "https://hanime1.me/search?query={keyword}",
             "searchUseOnlyFirstWord": false,
-            "preferShortest": true,
+            "searchRemoveSpecial": true,
+            "searchUseSubjectNamesCount": 2,
+            "rawBaseUrl": "",
+            "requestInterval": 1233,
             "subjectFormatId": "indexed",
             "selectorSubjectFormatA": {
               "selectLists": "div.home-rows-videos-wrapper a",
@@ -72,7 +75,7 @@
       },
       {
         "factoryId": "web-selector",
-        "version": 1,
+        "version": 2,
         "arguments": {
           "name": "hanime1_720p",
           "description": "1080放不出来用这个（说明无1080p）",
@@ -80,7 +83,10 @@
           "searchConfig": {
             "searchUrl": "https://hanime1.me/search?query={keyword}",
             "searchUseOnlyFirstWord": false,
-            "preferShortest": true,
+            "searchRemoveSpecial": true,
+            "searchUseSubjectNamesCount": 2,
+            "rawBaseUrl": "",
+            "requestInterval": 1233,
             "subjectFormatId": "indexed",
             "selectorSubjectFormatA": {
               "selectLists": "div.home-rows-videos-wrapper a",
@@ -136,8 +142,10 @@
           "searchUrl": "https://www.moduys03.com/search/{keyword}.html",
           "searchUseOnlyFirstWord": false,
           "searchRemoveSpecial": true,
+          "searchUseSubjectNamesCount": 3,
           "rawBaseUrl": "",
-          "subjectFormatId": "a",
+          "requestInterval": 2333,
+          "subjectFormatId": "a"，
           "selectorSubjectFormatA": {
             "selectLists": "body > main > div.box-width > ul > li > div > div > h3 > a",
             "preferShorterName": true
@@ -197,6 +205,7 @@
           "searchUrl": "https://www.1dm4.cc/search/{keyword}-------------.html",
           "searchUseOnlyFirstWord": false,
           "searchRemoveSpecial": true,
+          "searchUseSubjectNamesCount": 3,
           "rawBaseUrl": "",
           "requestInterval": 2333,
           "subjectFormatId": "indexed",
