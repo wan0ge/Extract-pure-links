@@ -200,7 +200,7 @@
       "arguments": {
         "name": "第一动漫网",
         "description": "可直连,含内嵌广告,码率低,请勿相信任何片中广告",
-        "iconUrl": "https://www.1dm4.cc/favicon.ico?v=1.2.6",
+        "iconUrl": "https://www.1dm8.cc/favicon.ico?v=1.2.6",
         "searchConfig": {
           "searchUrl": "https://www.1dm4.cc/search/{keyword}-------------.html",
           "searchUseOnlyFirstWord": false,
@@ -227,7 +227,7 @@
           "selectorChannelFormatFlattened": {
             "selectChannelNames": "body > div > div > div > div > div > div > div > li",
             "matchChannelName": "",
-            "selectEpisodeLists": "body > div.container-fluid > div > div.col-md-9.ms-sm-auto.col-lg-10.p-0.px-md-4.mt-3.mt-md-4 > div.video-tabs.bg-body.rounded.p-3.p-md-4.mt-3.mt-md-4 > div.tab-content.pt-3 > div.tab-pane.fade.show.active.v-list > div.tab-content.form-collapse.pt-3.v-playurl > div.tab-pane.fade",
+            "selectEpisodeLists": "body > div.container-fluid > div > div.col-md-9.ms-sm-auto.col-lg-10.p-0.px-md-4.mt-3.mt-md-4 > div.video-tabs.bg-body.rounded.p-3.p-md-4.mt-3.mt-md-4 > div.tab-content.pt-3 > div.tab-pane.fade.show.active.v-list > div.tab-content.form-collapse.pt-3 > div.tab-pane.fade",
             "selectEpisodesFromList": "a",
             "selectEpisodeLinksFromList": "",
             "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
@@ -251,7 +251,7 @@
             "cookies": "quality=1080",
             "addHeadersToVideo": {
               "referer": "",
-              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+              "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
               }
             }
           }
