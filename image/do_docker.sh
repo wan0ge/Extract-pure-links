@@ -62,11 +62,7 @@ install_depends_apps() {
 
 # 配置并启动Docker
 configure_and_start_docker() {
-    local new_partition="$1"
-    local usb_mount_point="/mnt/upan_data"
-    local docker_root="$usb_mount_point/docker"
-
-
+    
     green "正在创建 Docker 配置文件 /etc/docker/daemon.json"
     mkdir -p /etc/docker
     echo '{
