@@ -130,70 +130,8 @@
             }
           }
         }
-      },
-      {
-      "factoryId": "web-selector",
-      "version": 2,
-      "arguments": {
-        "name": "魔都动漫",
-        "description": "可直连,含内嵌广告,码率低,请勿相信任何片中广告",
-        "iconUrl": "https://www.moduys03.com/favicon.ico",
-        "searchConfig": {
-          "searchUrl": "https://www.moduys03.com/search/{keyword}.html",
-          "searchUseOnlyFirstWord": false,
-          "searchRemoveSpecial": true,
-          "searchUseSubjectNamesCount": 3,
-          "rawBaseUrl": "",
-          "requestInterval": 1233,
-          "subjectFormatId": "a",
-          "selectorSubjectFormatA": {
-            "selectLists": "body > main > div.box-width > ul > li > div > div > h3 > a",
-            "preferShorterName": true
-          },
-          "selectorSubjectFormatIndexed": {
-            "selectNames": ".search-box .thumb-content > .thumb-txt",
-            "selectLinks": ".search-box .thumb-menu > a",
-            "preferShorterName": true
-          },
-          "selectorSubjectFormatJsonPathIndexed": {
-            "selectLinks": "$[*]['url', 'link']",
-            "selectNames": "$[*]['title','name']",
-            "preferShorterName": true
-          },
-          "channelFormatId": "index-grouped",
-          "selectorChannelFormatFlattened": {
-            "selectChannelNames": "body > main > div > div.anthology.wow.fadeInUp.animated > div > a",
-            "matchChannelName": "^(?<ch>.+?)(\\d+)?$",
-            "selectEpisodeLists": "body > main > div > div > div.anthology-list.top20",
-            "selectEpisodesFromList": "a",
-            "selectEpisodeLinksFromList": "",
-            "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
-          },
-          "selectorChannelFormatNoChannel": {
-            "selectEpisodes": "#glist-1 > div.module-blocklist.scroll-box.scroll-box-y > div > a",
-            "selectEpisodeLinks": "",
-            "matchEpisodeSortFromName": " 第 \\s*(?<ep>.+)\\s*[话集]"
-          },
-          "defaultResolution": "1080P",
-          "filterByEpisodeSort": true,
-          "filterBySubjectName": false,
-          "selectMedia": {
-            "distinguishSubjectName": true,
-            "distinguishChannelName": true
-          },
-          "matchVideo": {
-            "enableNestedUrl": true,
-            "matchNestedUrl": "^.+(index|m3u8|vip|xigua\\.php).+\\?",
-            "matchVideoUrl": "(?<v>https?:\\/\\/(?:[^/]*\\.)?(?:hn\\.bfvvs|modujx\\w*|rrcdnbf\\w*|lz-cdn\\w*|v\\.cdnlz\\w*|bfikuncdn|cdn\\.wlcdn\\w*|tlkqc|vip\\.ffzy-play\\w*|vip\\.ffzy-online\\w*|svipsvip\\.ffzy-online\\w*|svip\\.high\\w*|v\\w*\\.fentvoss)\\S+\\.(?:mp4|mkv|m3u8)(?:\\?.+)?)",
-            "cookies": "quality=1080",
-            "addHeadersToVideo": {
-              "referer": "",
-              "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
-              }
-            }
-          }
-        }
       }
     ]
   }
 }
+
