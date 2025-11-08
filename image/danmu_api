@@ -1,0 +1,14 @@
+#!/bin/sh /etc/rc.common
+# Copyright ...
+START=99
+USE_PROCD=1
+NAME=danmu_api
+PROG=/usr/bin/node
+APP=/root/danmu_api/danmu_api/server.js
+
+start_service() {
+    procd_open_instance
+    procd_set_param command $PROG $APP
+    procd_set_param respawn
+    procd_close_instance
+}
